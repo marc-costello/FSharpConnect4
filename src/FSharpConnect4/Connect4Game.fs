@@ -18,10 +18,6 @@ module Types =
         | Player of Player
         | Empty
 
-    type PlayerType =
-        | Human
-        | Computer
-
     type GridCoordinate = int * int
     type Grid = Coin[,]
     type Move = GridCoordinate * Coin
@@ -37,12 +33,7 @@ module Types =
         | NegativeLeft 
         | NegativeRight
 
-    type MoveEvent = {
-        Player: Player;
-        Column: int;
-    }
-
-    type Game = { Board:Grid; ActivePlayer:Player; MoveEvent:Event<MoveEvent> }
+    type Game = { Board:Grid; Player:Player }
 
     
 

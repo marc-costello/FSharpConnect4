@@ -6,5 +6,5 @@ open Game
 
 [<EntryPoint>]
 let main argv =
-    beginGame <| Game.createNewGame()
+    let game =  Game.startGame()
     0 // return an integer exit code
